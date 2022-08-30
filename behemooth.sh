@@ -8,4 +8,4 @@ taille_arrondie=$(echo $(( $(( $(stat -c%s $abblay2.ins)/4096 )) +1 )) *4096 | b
 offset_total=$(($taille_arrondie + $offset_total))
 echo $taille_arrondie >> test
 done
-awk '{S+=$0}{print S}END{}' test
+awk '{S+=$0}{print S}END{}' test > offsets
